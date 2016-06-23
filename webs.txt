@@ -1,0 +1,103 @@
+
+http://papelesdeinteligencia.com/tecnicas-de-analisis-de-datos/
+
+http://datasciencemasters.org/
+
+http://databeers.tumblr.com/
+
+********************************************************
+
+
+Tutellus cursos historia
+Kaggle
+Ngram
+Freeling
+348 dataset
+
+
+***************************************************************
+
+http://www.r-tutor.com/content/r-tutorial-ebook
+
+********************************************************************************************
+
+https://github.com/leeper/rio
+Te soluciona la vida haciendo la importación/exportación/conversión entre formatos, rápida e indolora.  Sólo te tienes que preocupar de la ruta al archivo porque el paquete adivina la estructura y el formato que necesitas.
+
+Al lío:
+
+install.packages("rio")
+
+library(rio)
+
+# lectura de archivos
+mi.df <- import("ruta_archivo.csv")
+
+# exportación a Excel (ver tabla de formatos de exportación)
+export("mi.df.xls")
+
+# convertir entre formatos
+convert("miarchivo.csv" , "miarchivo.json")
+
+
+**************************************************************************************************************
+
+ paquete que gestiona la actualización de paquetes y el propio R con una función en consola, esta vez sólo en el sistema operativo Windows (aunque nunca entenderé porqué alguien quiere usar este engendro del infierno), y otro que gestiona los paquetes a cargar en nuestros scripts, instalándolos si no existen.
+
+ installR
+https://cran.r-project.org/web/packages/installr/installr.pdf
+
+Al lío:
+
+install.packages("installr")
+library(installr)
+
+# esto abre el asistente para actualizar, comprueba la versión, 
+# y si existe una nueva, inicia el proceso de update
+
+updateR()  
+
+Ver la documentación para todas las funciones que se ofrecen.
+
+Gestión y carga de paquetes en los scripts: pacman
+https://cran.r-project.org/web/packages/pacman/vignettes/Introduction_to_pa…
+
+# instalación (comprobando si existe)
+
+if (!require("pacman")) install.packages("pacman")
+
+
+# supongamos que necesitamos tm, party, stringi, caret, e1071, randomforest y gbm
+
+# pacman comprueba que estén. Si están los carga y si no, los instala y los carga.
+
+
+pacman::p_load( tm, party, stringi,  caret, e1071, randomForest, gbm)
+
+******************************************************************************************
+Pues tengo dos versiones, la larga y la corta. En una me paso de listo y en la otra quedo como tonto.
+
+Probé decenas de modos de leer los archivos, incluso me planteé hacer un replace de todos los caracteres extraños, pero eran miles de archivos y el rendimiento imaginé que sería penoso.
+
+- Versión larga: quanteda
+https://cran.r-project.org/web/packages/quanteda/vignettes/quickstart.html
+
+El paquete quanteda viene a ser como el tm, pero más actualizado y resolviendo problemas que tm no resuelve. Entre ellos el problema de leer textos en set de caracteres distintos del inglés.
+
+require(quanteda)
+textos <- corpus(textfile("C:/ruta/*.txt", encoding = "UTF-8")) 
+
+Yo sólo lo usé para leer los textos y después los pasé a tm:
+
+enTM <- Corpus(VectorSource(texts(textos))) 
+
+
+Hasta que descubrí (para mi vergüenza) la versión corta:
+
+library(tm)
+
+txt <- DirSource(directory = "../ruta/",encoding ="UTF-8")
+documentoss <- VCorpus(x=txt)
+
+
+*********************************************************************************
