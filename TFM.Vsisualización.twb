@@ -1,0 +1,2548 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9300.16.0315.0125                                -->
+<workbook source-build='9.3.0 (9300.16.0315.0125)' source-platform='win' version='9.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Datosestudio' inline='true' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' version='9.3'>
+      <connection class='textscan' directory='F:/Datos proyecto/Entregable' filename='Datosestudio.csv' password='' server=''>
+        <relation name='Datosestudio.csv' table='[Datosestudio#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='es_ES' separator=' '>
+            <column datatype='string' name='Año' ordinal='0' />
+            <column datatype='string' name='Acción_previa' ordinal='1' />
+            <column datatype='string' name='Factor_principal' ordinal='2' />
+            <column datatype='string' name='Descripcion_factor1' ordinal='3' />
+            <column datatype='string' name='Factor_secundario' ordinal='4' />
+            <column datatype='string' name='Descripcion_factor2' ordinal='5' />
+            <column datatype='string' name='Antigüedad_vehiculo' ordinal='6' />
+            <column datatype='string' name='Tipo_accidente' ordinal='7' />
+            <column datatype='string' name='Direccion_Vehiculo' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Año</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Año]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Año</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Acción_previa</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Acción_previa]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Acción_previa</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Factor_principal</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Factor_principal]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Factor_principal</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Descripcion_factor1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Descripcion_factor1]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Descripcion_factor1</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Factor_secundario</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Factor_secundario]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Factor_secundario</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Descripcion_factor2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Descripcion_factor2]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Descripcion_factor2</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Antigüedad_vehiculo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Antigüedad_vehiculo]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Antigüedad_vehiculo</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tipo_accidente</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Tipo_accidente]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Tipo_accidente</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Direccion_Vehiculo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Direccion_Vehiculo]</local-name>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias>Direccion_Vehiculo</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Datosestudio.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot; &quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_ES&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Acción previa' datatype='string' name='[Acción_previa]' role='dimension' type='nominal' />
+      <column caption='Antigüedad vehiculo' datatype='string' name='[Antigüedad_vehiculo]' role='dimension' type='nominal' />
+      <column caption='Descripcion factor1' datatype='string' name='[Descripcion_factor1]' role='dimension' type='nominal' />
+      <column caption='Descripcion factor2' datatype='string' name='[Descripcion_factor2]' role='dimension' type='nominal' />
+      <column caption='Direccion Vehiculo' datatype='string' name='[Direccion_Vehiculo]' role='dimension' type='nominal' />
+      <column caption='Factor principal' datatype='string' name='[Factor_principal]' role='dimension' type='nominal' />
+      <column caption='Factor secundario' datatype='string' name='[Factor_secundario]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Tipo accidente' datatype='string' name='[Tipo_accidente]' role='dimension' type='nominal' />
+      <column-instance column='[Acción_previa]' derivation='None' name='[none:Acción_previa:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Descripcion_factor1]' derivation='None' name='[none:Descripcion_factor1:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Direccion_Vehiculo]' derivation='None' name='[none:Direccion_Vehiculo:nk]' pivot='key' type='nominal' />
+      <group caption='Acción (Factor secundario)' hidden='true' name='[Action (Factor secundario)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Factor_secundario]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='F:\Datos proyecto\Entregable\Nueva carpeta\tfmVisual.tde' schema='Extract' tablename='Extract' update-time='06/23/2016 03:55:07 PM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='2266517' timestamp-start='2016-06-23 15:55:07.056' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Acción_previa</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Acción_previa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Acción_previa</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Adelantamiento&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Recibiendo asistencia &quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>8</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Antigüedad_vehiculo</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Antigüedad_vehiculo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Antigüedad_vehiculo</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;desconocido&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Menos de 5 años&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;Entre 5 y 15 años&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Año</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Año]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Año</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;2009&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;2012&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Descripcion_factor1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Descripcion_factor1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Descripcion_factor1</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Alcohol/Drogas&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Vía defectuosa&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>6</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Descripcion_factor2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Descripcion_factor2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Descripcion_factor2</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Alcohol/Drogas&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Vía defectuosa&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>7</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Direccion_Vehiculo</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Direccion_Vehiculo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Direccion_Vehiculo</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;desconocido&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;suroeste&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>4</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Factor_principal</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Factor_principal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Factor_principal</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Factor ambiental&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;VEHICLE&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Factor_secundario</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Factor_secundario]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Factor_secundario</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Factor ambiental&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;VEHICLE&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>3</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>8</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tipo_accidente</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Tipo_accidente]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tipo_accidente</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Datosestudio.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Atropello&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Sin información&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>2266517</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;es&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>5</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.568446' measure-ordering='alphabetic' measure-percentage='0.431555' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Direccion_Vehiculo:nk]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;desconocido&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;Noreste&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;sureste&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;oeste&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;Norte&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;suroeste&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;Noroeste&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;Sur&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;Este&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Descripcion_factor1:nk]' type='palette'>
+            <map to='#17becf'>
+              <bucket>&quot;Vía defectuosa&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;Alcohol/Drogas&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;Deslumbramiento&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;Peatón/ciclista&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;Fatiga/salud&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;Fallo vehículo&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;Persecución/control Policial&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;Distracción&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;Motivo conductor&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;Animal&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;desconocido&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Acción_previa:nk]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;Girando a la izquierda&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;Girando a la derecha&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;Arrancando desde aparcamiento&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;Incorporación&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;Recibiendo asistencia &quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;Frenando en circulacion&quot;</bucket>
+            </map>
+            <map to='#c49c94'>
+              <bucket>&quot;Giro de 180 grados&quot;</bucket>
+            </map>
+            <map to='#c5b0d5'>
+              <bucket>&quot;Adelantamiento&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;Cambiando de carril&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;Esquivando un objeto&quot;</bucket>
+            </map>
+            <map to='#f7b6d2'>
+              <bucket>&quot;Persecucion policial&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;Parando&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;Arrancando en circulacion&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;Aparcando&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filtro 1 (generado)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Factores' type='sheet' worksheet='Hoja 7' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Factores' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Hoja 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Factor Principal del accidente</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column caption='Factor principal' datatype='string' name='[Factor_principal]' role='dimension' type='nominal' />
+            <column caption='Factor secundario' datatype='string' name='[Factor_secundario]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Factor_principal]' derivation='None' name='[none:Factor_principal:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[Action (Factor secundario)]'>
+            <groupfilter function='level-members' level='[Factor_secundario]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[Action (Factor secundario)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</rows>
+        <cols>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 10'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column datatype='string' name='[Año]' role='dimension' type='nominal' />
+            <column caption='Factor principal' datatype='string' name='[Factor_principal]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Año]' derivation='None' name='[none:Año:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Factor_principal]' derivation='None' name='[none:Factor_principal:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]'>
+            <groupfilter function='member' level='[none:Factor_principal:nk]' member='&quot;Factor humano&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.32883977890014648' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</rows>
+        <cols>([textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk] / [textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 11'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column datatype='string' name='[Año]' role='dimension' type='nominal' />
+            <column caption='Factor principal' datatype='string' name='[Factor_principal]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Año]' derivation='None' name='[none:Año:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Factor_principal]' derivation='None' name='[none:Factor_principal:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]'>
+            <groupfilter function='member' level='[none:Factor_principal:nk]' member='&quot;VEHICLE&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.29585635662078857' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</rows>
+        <cols>([textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk] / [textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 12'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column datatype='string' name='[Año]' role='dimension' type='nominal' />
+            <column caption='Factor principal' datatype='string' name='[Factor_principal]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Año]' derivation='None' name='[none:Año:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Factor_principal]' derivation='None' name='[none:Factor_principal:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]'>
+            <groupfilter function='member' level='[none:Factor_principal:nk]' member='&quot;Factor ambiental&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.18591159582138062' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</rows>
+        <cols>([textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk] / [textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 13'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>curiosidades</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column caption='Descripcion factor1' datatype='string' name='[Descripcion_factor1]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Tipo accidente' datatype='string' name='[Tipo_accidente]' role='dimension' type='nominal' />
+            <column-instance column='[Descripcion_factor1]' derivation='None' name='[none:Descripcion_factor1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Tipo_accidente]' derivation='None' name='[none:Tipo_accidente:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]'>
+            <groupfilter function='member' level='[none:Descripcion_factor1:nk]' member='&quot;Persecución/control Policial&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Explosión&quot;' />
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Inmersión&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]</column>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' />
+              <text column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-transparency' value='198' />
+                <format attr='mark-color' value='#7780a2' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols total='true' />
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Situación previa al accidente</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column caption='Acción previa' datatype='string' name='[Acción_previa]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Acción_previa]' derivation='None' name='[none:Acción_previa:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter from='&quot;Adelantamiento&quot;' function='range' level='[none:Acción_previa:nk]' to='&quot;Cambiando de carril&quot;' />
+              <groupfilter from='&quot;Esquivando un objeto&quot;' function='range' level='[none:Acción_previa:nk]' to='&quot;Recibiendo asistencia &quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='computed' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]' direction='DESC' using='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' />
+          <filter class='quantitative' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' included-values='non-null' />
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</column>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' />
+              <text column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]' />
+              <color column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Tipo de accidente</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Tipo accidente' datatype='string' name='[Tipo_accidente]' role='dimension' type='nominal' />
+            <column-instance column='[Tipo_accidente]' derivation='None' name='[none:Tipo_accidente:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Atropello&quot;' />
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Colisión  Vehículo&quot;' />
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Colisión con animal&quot;' />
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Colisión con objeto&quot;' />
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Colisión con Tren&quot;' />
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Explosión&quot;' />
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Inmersión&quot;' />
+              <groupfilter function='member' level='[none:Tipo_accidente:nk]' member='&quot;Sin colisión&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='computed' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]' direction='DESC' using='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' />
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</rows>
+        <cols>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Antiguedad del Vehículo</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column caption='Antigüedad vehiculo' datatype='string' name='[Antigüedad_vehiculo]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Antigüedad_vehiculo]' derivation='None' name='[none:Antigüedad_vehiculo:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Antigüedad_vehiculo:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Antigüedad_vehiculo:nk]' member='&quot;Entre 5 y 15 años&quot;' />
+              <groupfilter function='member' level='[none:Antigüedad_vehiculo:nk]' member='&quot;Más de 15 años&quot;' />
+              <groupfilter function='member' level='[none:Antigüedad_vehiculo:nk]' member='&quot;Menos de 5 años&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Antigüedad_vehiculo:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' palette='tableau-map-purple' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' />
+              <color column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' />
+              <text column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Antigüedad_vehiculo:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-transparency' value='234' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Factor humano principal</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column caption='Descripcion factor1' datatype='string' name='[Descripcion_factor1]' role='dimension' type='nominal' />
+            <column caption='Factor secundario' datatype='string' name='[Factor_secundario]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Descripcion_factor1]' derivation='None' name='[none:Descripcion_factor1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[Action (Factor secundario)]'>
+            <groupfilter function='level-members' level='[Factor_secundario]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Descripcion_factor1:nk]' member='&quot;Alcohol/Drogas&quot;' />
+              <groupfilter function='member' level='[none:Descripcion_factor1:nk]' member='&quot;Distracción&quot;' />
+              <groupfilter function='member' level='[none:Descripcion_factor1:nk]' member='&quot;Fatiga/salud&quot;' />
+              <groupfilter function='member' level='[none:Descripcion_factor1:nk]' member='&quot;Peatón/ciclista&quot;' />
+              <groupfilter function='member' level='[none:Descripcion_factor1:nk]' member='&quot;Persecución/control Policial&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]</column>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[Action (Factor secundario)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='omit-on-special' value='true' />
+            <format attr='break-on-special' value='true' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='border-style' value='dashed' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.94453036785125732' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#daa800' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</rows>
+        <cols>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Factor secundario</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column caption='Factor secundario' datatype='string' name='[Factor_secundario]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Factor_secundario]' derivation='None' name='[none:Factor_secundario:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4d9f6d' />
+                <format attr='size' value='0.97751379013061523' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='mark-transparency' value='242' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</rows>
+        <cols>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_secundario:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 8'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Segundo factor humano</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column caption='Descripcion factor2' datatype='string' name='[Descripcion_factor2]' role='dimension' type='nominal' />
+            <column caption='Factor secundario' datatype='string' name='[Factor_secundario]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Descripcion_factor2]' derivation='None' name='[none:Descripcion_factor2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[Action (Factor secundario)]'>
+            <groupfilter function='level-members' level='[Factor_secundario]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor2:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Descripcion_factor2:nk]' member='&quot;Alcohol/Drogas&quot;' />
+              <groupfilter function='member' level='[none:Descripcion_factor2:nk]' member='&quot;Deslumbramiento&quot;' />
+              <groupfilter function='member' level='[none:Descripcion_factor2:nk]' member='&quot;Distracción&quot;' />
+              <groupfilter function='member' level='[none:Descripcion_factor2:nk]' member='&quot;Fatiga/salud&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor2:nk]</column>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[Action (Factor secundario)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height-header' value='25' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</rows>
+        <cols>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor2:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Hoja 9'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>accidentes por año</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Datosestudio' name='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.0iqi0s10fsnyjd1c5yff21b1qjuq'>
+            <column caption='Antigüedad vehiculo' datatype='string' name='[Antigüedad_vehiculo]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Año]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Antigüedad_vehiculo]' derivation='None' name='[none:Antigüedad_vehiculo:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Año]' derivation='None' name='[none:Año:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Antigüedad_vehiculo:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Antigüedad_vehiculo:nk]' member='&quot;Entre 5 y 15 años&quot;' />
+              <groupfilter function='member' level='[none:Antigüedad_vehiculo:nk]' member='&quot;Más de 15 años&quot;' />
+              <groupfilter function='member' level='[none:Antigüedad_vehiculo:nk]' member='&quot;Menos de 5 años&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Antigüedad_vehiculo:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]' value='259' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#1b1b1b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:ok]</rows>
+        <cols>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Evolucion'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#c0c0c0' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='11' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='15' param='vert' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='5250' id='14' type='title' w='100000' x='0' y='0' />
+            <zone h='94250' id='13' type='layout-basic' w='100000' x='0' y='5250'>
+              <zone h='94250' id='10' name='Hoja 9' show-title='true' w='100000' x='0' y='5250' />
+            </zone>
+          </zone>
+        </zone>
+        <zone h='24375' id='2' name='Hoja 10' show-title='true' w='30400' x='1200' y='49000' />
+        <zone h='24875' id='8' name='Hoja 11' show-title='true' w='32100' x='33600' y='49250' />
+        <zone h='24875' id='9' name='Hoja 12' show-title='true' w='30600' x='68100' y='48875' />
+        <zone h='11875' id='7' name='Hoja 10' pane-specification-id='0' param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]' type='color' w='14000' x='2200' y='36375' />
+        <zone h='24875' id='12' name='Hoja 13' show-title='true' w='42100' x='48600' y='5125' />
+      </zones>
+    </dashboard>
+    <dashboard name='Factores'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Factores&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f0d9b6' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='9' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='16' param='vert' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='5250' id='15' type='title' w='100000' x='0' y='0' />
+            <zone h='94250' id='14' param='vert' type='layout-flow' w='100000' x='0' y='5250'>
+              <zone h='94250' id='12' param='vert' type='layout-flow' w='100000' x='0' y='5250'>
+                <zone h='94250' id='10' type='layout-basic' w='100000' x='0' y='5250' />
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='24875' id='1' name='Hoja 6' show-title='true' w='88500' x='1600' y='26375' />
+        <zone h='19625' id='6' name='Hoja 1' show-title='true' w='33300' x='2500' y='5375' />
+        <zone h='18500' id='7' name='Hoja 7' show-title='true' w='33300' x='56900' y='6250' />
+        <zone h='20875' id='8' name='Hoja 8' show-title='true' w='85000' x='3600' y='52875' />
+      </zones>
+    </dashboard>
+    <dashboard name='accidentes'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f0d9b6' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='border-style' value='none' />
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='font-family' value='Calibri' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='11' param='vert' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='5250' id='10' type='title' w='100000' x='0' y='0' />
+            <zone h='80875' id='5' param='horz' type='layout-flow' w='100000' x='0' y='5250'>
+              <zone fixed-size='160' h='80875' id='4' is-fixed='true' param='vert' type='layout-flow' w='100000' x='0' y='5250'>
+                <zone fixed-size='318' h='40750' id='6' is-fixed='true' name='Hoja 3' pane-specification-id='0' param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]' type='color' w='100000' x='0' y='5250' />
+                <zone h='31875' id='7' name='Hoja 4' show-title='true' w='100000' x='0' y='46000'>
+                  <layout-cache fixed-size-h='247' type-h='fixed' type-w='fixed' />
+                </zone>
+                <zone h='7250' id='9' name='Hoja 5' pane-specification-id='0' param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' type='color' w='100000' x='0' y='77875' />
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='31500' id='1' name='Hoja 3' show-title='true' w='25000' x='23000' y='4750' />
+        <zone h='24875' id='8' name='Hoja 5' show-title='true' w='33300' x='54800' y='4875' />
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows film-mode='true' show-side-pane='false' source-height='28'>
+    <window class='dashboard' name='Factores'>
+      <viewpoints>
+        <viewpoint name='Hoja 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Hoja 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Hoja 7'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Hoja 8'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='dashboard' name='accidentes'>
+      <viewpoints>
+        <viewpoint name='Hoja 3'>
+          <highlight>
+            <color-one-way>
+              <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Hoja 4'>
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields>
+                      <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</field>
+                    </x-fields>
+                    <y-fields>
+                      <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</field>
+                    </y-fields>
+                  </pane-descriptor>
+                  <columns>
+                    <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</field>
+                    <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>&quot;Colisión con objeto&quot;</value>
+                  <value>90458</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
+        </viewpoint>
+        <viewpoint name='Hoja 5' />
+      </viewpoints>
+      <active id='7' />
+    </window>
+    <window class='dashboard' maximized='true' name='Evolucion'>
+      <viewpoints>
+        <viewpoint name='Hoja 10'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Hoja 11'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Hoja 12'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Hoja 13' />
+        <viewpoint name='Hoja 9' />
+      </viewpoints>
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='175'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Antigüedad_vehiculo:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Direccion_Vehiculo:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Acción_previa:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[sum:Number of Records:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 6'>
+      <cards>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Antigüedad_vehiculo:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor2:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_principal:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Tipo_accidente:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Factor_secundario:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card param='[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor2:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor1:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Descripcion_factor2:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Hoja 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Antigüedad_vehiculo:nk]</field>
+            <field>[textscan.0iqi0s10fsnyjd1c5yff21b1qjuq].[none:Año:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Factores' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='accidentes' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
+      AAAgAElEQVR4nO29eZQd13nY+atXb623L73v3UADxEIAJAhwFSmRWiiJWsjIlq1Y46HljO2J
+      Tk5Wz8TxiU/ixElGc5Tjc5yMlyNHtCczkhVRiS1SNBdRpLiBWAiAaLCBbvT6en37Vu/Vmj8e
+      8HpFL+huNICu3zkPeK/q1r3fra6v7v3u/b57hUz/CyYWFjsU23YLYGGxnVgKYLGjsRTgDmd8
+      KlX7PjubRtG3UZhbEEsB7nCG44na95+9eZJE+fppf/jiCbSbINOthH27BbDYGG++c45LIzMc
+      OX6EvpNn8QSD3NUR442zoxw50M2Jc1doCYi8cCpOZibDPfksf/rjs+iqyuce3c+fv3CWRkng
+      0JG9nLowQmNnC+P9g6gmdO7dRd+pD2nsbOOph+/a7qpuCVYLcFuj8dHgNIJpMptMMpm38cyn
+      7mVyLM599x3k+L4WDNPkyvA09x+/m11NASbi0ySLKs2NEQxdJxSL8MD+JjKKQEPYx729Yc4P
+      JPEH/Picdvb3NDAylkTd7qpuEVYLcFtjoy7iQzVMIsEwR7qyPP/yaQ7ftYu3Tl9Ek9tpb4py
+      +O5OXjzxEabNTe/uNiYmq3aB1yfRVhfA53cSMd0c2t3A6UsZPnGsg6xi4naJxAsqdRHfHfum
+      FKx5AIudzJ2q2BYWa8JSAIsdzY5QgEwiwfdeeJ+PrkwyOpFgOqcsm66UyzKeKnHxoxEKqrHm
+      /C8NTy17/G9e++C61wwMT2EA58+cZzizcPBRKRYYnsmvufytppzPc+KjidpvQ1NJFSr0Dy1f
+      72u888HAgt/vnxmoGdMXzg+Qu1rtD04PIAN9AxOYWoVLY1UbJTk5xaXJAhgaJ/vGFuQ1NRbn
+      yqy8oXrBPCPY1BXOXE5wz97mubOGTqaoUizJNDeEEVbJrJAv4fJKOG4xtbLb7RiGztjoBGlZ
+      xxnyYZdtGEKZSjaF4o0g5HO0N4WYLmiUymXis1k+HEvR0VzPlx9s5z//4BThuhDl1CyhgI/z
+      Q7P0dDQR8tpJVUzyyQQvnJ3hd5/9BD99/X3Oz2h0Rz0A/NWPXquV0dIcZmiqiNfjZnB0gvhE
+      knBS47lL49y9q4lEtkBTNMBURUCZjOOqb+HZzx/Z1vv3wcVRRjMKMafGiYuT1IfcnB3OsKe7
+      kdHhcQo2F40BLyYGaqlAySbhVAv0TRbxO2AwqRB1aJwZSHH3kV28f6qP031xDpg24hMpvIJI
+      D5CYmOL9Qh7D4eH7L1ymOeLlwuhlSnd3ICsaP3jxBHVhL80NUYZGZ3EFKpx6P8He/bs42BG5
+      obrVFGB4YIyLowUcepmS6KaSTdPS4OfsxWm8PjfvnL6MgpMvP3mYn/30NDjdlAsFKoqKPyBR
+      KVQw7C5i9X4mZwt89VOHN+v+b5h8QcZpF/H6vbS0BpjIlcmlZvFEApiyhD/gwUDB6XbT6BaJ
+      T6rU14U4FqtHKFffxJpu0BAN4Ip5qfOK4HRx310tvN2foLveiaKWaW8IAmAIIs1RN9GwB9Bx
+      OufK8EgSkrNMJOQj6NbJFxWa6kKYArREvezb3UpF09Gmcrg7G/HX123jnasyMpnANEzeu1ih
+      t7ORdF7GF/Cjl0uMDk9xz4P38uHpPuyBIHpmFiPYgE/LI4p2Bq5McCGps6/OiSjaEIDZVB7R
+      JjIzm2J4PElvWz0CcM/+Vr79/AV+9fFuXhlNEPK6OLqvjdHJFGXVIFtSiPocvHGyn1DAS8XM
+      U9Y0MvnKDdetNgp08uxlRNNAxond5cRhVPB7ncwkZXTDQBRsOF1O9h3s4I2fniYUi+K2g6mp
+      ROrquDQwRndDgHhRRVN0PnGsd5Nu/y2ArnApXqC3/cbeMncspsoP/uYkwcZ6Pnlfz3ZLc0Pc
+      0DBoJlciFJC2Qp4tQfREsHvu3IfX0GTUXHzL8hfv4HtX6wK9P2nyjRfndOHPnhQ42giDI9NE
+      wj4kyYPbIQLUHv5MoUTIt1ARsoUSwavHsrkiwYB34fl8kaB/7tjNUCbFdCN4mldPeJuiyylg
+      6xTADO3DZrvFDLtNYsWZ4A8vDOAMBHjnzGVUU6CzIcjwZAJVg8aGIKlMFtG0c/+9exkdHscm
+      +SkUMwgVjfrWJkrpDJlCGVO0Uyzk8fokRLvI+GgC0eMmFnCTLypIosm+/btpifm3rKJer3f1
+      ROvFNKCcg+IMGCo4veBtAIdn88tagZycWj3RBrDZbFy+HMfQVxsGuTUJBJ1IkmvZcysqQHNT
+      jMHJDKLNRHS5KZVkDMOkPuRFNyHolcgXqgZIIpcn6pQI+iRGZiYINRhoqoouiNgxKasaxUSe
+      psYQsWgAQ7QT9rsQRZGpqSSqdhv56WplGH0L4u9DJbvopACxvdDzBPjvnFbnzTfHiUUjZFNF
+      8kUNl0ukUpn7mwUjXnS5TEGeO+bx2HFJLpRimVK5ery5I0JyLEVl7aPMG+aBB+vweUtITgFP
+      pA3JMXeupgDNPviNeQM3zT6I+sNEo2Gga9VCPvXwPbXvB3vaq1865kYwlusu3ZYkL8OF74NS
+      uE4CExIXIfERtD0Iu58Em3hTRdwS7E7amiUM0c6eHhu66KJi6NRFPJx6e4i6eh/pKQ1vwIMg
+      CMymZPb0RikpArMTCqLHTUejD0fIid9uYiAQavBx9t1RlJugDP/lO39CdwxKocM4jBTFZJGO
+      A0fmFKDFL/Cb92xdE3dHPPwTp6DvvwFrGTcwYewtkFNw99dufyUwDEplHbtoo5AvUzYNDBEE
+      TUPRTPK5Cm6PnYIu4jPK6IpGMlVGM2143A5EyY2mmRQzZSS7gKJBUdZxOQSUyta7o33s6F2M
+      JkuEw2G66qNMjyUpKfqcAqRVH2fyc0OXR/yXcCgzxGeydLTW1wzg5Vjt7b7YGJblMoLdUcsz
+      nS8R9t/iCpIdhYvPs7aHfx6Ji3D5x7DnC0tOJeUk706+y1B2CICuYBf3N91P1BPdBIE3GV3h
+      7NmZ656ensgA4PU5iReqM+1jY/O7h6WtlG5VHv3c1zDUIsOTWbrbm+Fo9fiKNsDQ8DgFQWLq
+      TD+5gowpgKLC3s4YQ2MJyppBY0OQmUQap+jk4WP7efvdD9BMAcPh5gsP7eHld/vxOyGvVI0p
+      f1BiejROpKmFfDaLw+HA53WQShWr3edYiPsPrN7luqmYRvXNb96gnTL2DjQehmC1a6joCt/5
+      8Ds81/cceWWhy4Pf4efr+7/OsweexSk6Nyr5TadYWN7NZLvp//AEVwbHmahAfqYORbWRNe0r
+      K4BX8tDS0MDQFQWnU0QwTcoVg6lUHhOD+pBUNYZ9ErJc9fIIBryYJqh2NwCCIGCYBuGQn1yu
+      RLlUxuZwks0XsJkGAmCaYGLikdy4HLdgiMJsX3WkZyMMvQ6Hv46iK/z2m7/NKyOvLJssr+b5
+      ow/+iP50P//+kX9/WyrBrchbr7/E+QsJjj39JIODA+SyOYbytjkFcNsUOt2TzP/d3dUGQORA
+      95oLevi+/Qt+f/qhAxuVffuZPr/xPJKXQJX5Tt93r/vwz+eVkVf4Tvg7/Mah39h42RY8+/d/
+      d9njtdkNj6jQLU3WPh7x1mzKtoXMyMbzMHWSsx/yXN9za77kuQvPkZSTGy/b4rrUWgBxug/f
+      q/+qdqLw+O+S9XURn8nR09GA3bZ0hEhRFDRDQHI7lpy7o6jkal/fOnMJMRBmaiRBd0896WIZ
+      pVShJKv0dkbJpAuMVRw02bNcmbYRbfDx+SOtALw39NKSPv9K5NU8706+y+e6P7fpVbKosqoR
+      PJqUmUnnKZQK2B0e5GwOm+Qh6LaTSGYx7E6a64I8cPft6Qy1PkyGpouY2SITw3nOTeWpCDqH
+      wm7GyiKp/CiT0ynGxWaOhNJMzAhMKJWaAsQL63dXGM4Ob3IdLOazqhH8QFcXw0NjlGQIel1M
+      TSmEfT4klx2H04HodGCud2jwdsMVuDrjK/B3P3MEULnQWWR/Z2hd2ajOLXDHsNgQNQUwvHWU
+      DzzD/N/dDfUARPbPGcHHbrUhyptBsA1m5o9pO9b98COIdLTeB6MvreuyzmDn+sqxWBdzEWG+
+      Oip3f2U7Zbl1aTwMMx9uLI/YHu5vfRS/w09eXZsd4Hf6ub/pfhSjQkZNAxByhHHalnfsslg/
+      c0ZwOYNv5lztRKH+bnR3iGSmQDTkWzWjkixjd7hw2u9At9nYXvDWb2AuQID2R4h6onx9/9f5
+      ow/+aE1XPbX7c7yfe4NRebDWzRQQaPf0cCz8CBFn7AblsbjGijZAuVTkx2+eZ09XDF0XKGZy
+      FHSBiN9NYyzIuYujhKI+bKbB1GyWuqZ6Qi4nxw7eYd0kmwj7noGTf1ydFV4vbfdDuBOAZw88
+      S3+6f9W5gAMNewlHnYzICwPLTUxG5AHGy8M8UfcUndKu9ctjUWNFBRibSnOop4ETAxMc6Gwg
+      lZcRPRJhv5tSsURZ0bA7ndhNFcnjwSkKt71BbBgm/dN5To+kiWeqqw5EvE72Nga4r/cZXJf+
+      2/qUINpLse1TpJNl5IqOacJv7f09ml27eH7o/13SHfI7/DzV+znCUSfCCr6Juqnxyuxf83TT
+      r1jL+22AOSPY7qYcaGf+793dVUOvrbWBSMDLA3fvXnDxkQN3ztvHMEz+4t0RnntnmMHZ4rJp
+      fC47v9RzH79Zd5qIY+XVMk0g7j3KZdvDZM4tjhmAXcLf4R91f45J4xSmexJREOgMdnJ/0/28
+      n3tjyZt/OXRT40T6TR4Uj66lihbLMGcE291UQp3LJooE7uzhu9FkiW/+f6c5O770QZ1PoaLx
+      p30Ofug6xrfuL/Bx39CCSbIqAnJgNyfNYyTMGKywdI2Ih1bbw0iCyH27g0R8DhSjwqg8uHbZ
+      5UGOSndzh09Fbhk1BTiTHeSbfX9cO/GH+/43jgS6l40JvsZqMcHXSwOQyhVvCcW6OJnjl//0
+      XdKlta9/nKwIPPuGn2995Vd45qj3akikBg4vulTP+wNlkvm151eq6Py8L8Xx3hCCJ72ubqSJ
+      SVZLYZnDN8aWxgRnEmlGZ5IU8iqxiA8BE5toQxSdpAs5uhqiXBlL8vRnj+FYqcO7ReRklV9/
+      7uS6Hv5rmCb8sx+co/XXj3O8a0/t+KnLmXU9/NfQDXjvUpZ9u3faFhXby4pjls1NMbK5EqLN
+      xC255sUES7WY4Gtvq0Quj67pBH0S6WwB5erSgkGfRFNDmHDISzTkpzlWXTyqvaW+urCWqqEZ
+      22M4/8GLFxlP3/jyerph8k/+6iyKVq1rPFkmnrzxRZp0w+TKmIiwjhUrBQSC9jt32ZKtptYC
+      NLrC/K+tT9RONLnCRIMbjAlm9VXNHlm7rJvKaLLE90+ObzifsZTM90+O8bXj7fSNXS9OeO0U
+      SzY8rk5KritrSt/u6cFpc97mY2/bR00BmtwRfq3tU9spy03l+Q/i6JvU8vzVyTE+u7+JQnlz
+      VraIqYeJu0fRzZW7Q6Jg51j4EchtfJHYO5lKRSaXSy97rqYAM0KR1xxDtRMfVzvxFmzEZ7J0
+      ttbjmhe/a8PERnWHEdu8vvtiA/ga1xa/yhVKBBad367VIn7WP1v7/uShFlS5TEIX8ekKDo+D
+      kmxQ1nQO7ooxPDBDTjfoT1d4oMXP66MyX9gjkSjqvD2U4ex4loGpqzGv8hjf/taf8PhnPonD
+      6UI0VaazGrs6G8gkppnJqLS2RBi5chmvFOLww59htO9NVMVGXhc4fvxBNNnP412f59XE31xX
+      CUTBzhN1TxFxxsgxtmwaiyoej8SHH56nzisQ674buWKjvbHaFV/VHXoqpzAwPkOuqNIWdlEU
+      nOQTs4iCHU9AQqloVFSd+vogmUwaG9XY4KHBEYamskSjQRLTs0SiYUbGp7CJLhrrA7jtoOgi
+      4bCLoSszfP7Tx/CIW+dGYZompqyBKGCMJRmcLcw7B0d3xfhgWsVZLvDEPU2cPjdDRvLR4AZb
+      zEveMEnbnHxhXx2vj47S2RDkiCjw9lA1GPzsWJaYVA0DPfaJp8nnxpgd+gCH04XqvQs5fYn0
+      +BVcoSOU1CT2/BQjExO0HX6c0z/7axyuOjw91VWgNd2kwd7N002/won0m5YrxCbwzusvEw2A
+      NF5mYugcY4MT/P5//L9Wd4du9QWYnkxR1x5GLeQwDJOg30uhUMHrdRP1CZTKCjpVgzdfqI6A
+      JHJ5PG4XFUXB75NQDYP6sBfJH8LrtqPrMooMcqk6o6zqxpYpgKkZpL9/CbkviU2yE3iogZw8
+      N1Lzk3NxfjLnBsX/uHB9n59/FK+uwvaHry7soyfylaoCeNp46KE24AiwdCWI5fjFb/6HJcdU
+      zSAkSBx/tcyuV8+TLkwiBgK0PPZ56r78aWzOW3wVjVuML33xs0wkZZz+CO2x4+zbXcTOvKB4
+      r+lgvz5ntHpNJw1XY4Lv6mhcd4HzjeLVeGTtSW8IJV5AP1N94+sVnewbUwRddjKVhd2LI51R
+      vDYTw+XEp1a4lK7g83mIiQYlwYbNtOF2GKCZvD64cDnCusA8D02jwonXX6WuOUa2qCPnSzS1
+      t5IZOoev+wiGnCM1PUtzRzOTo3H8oSB2d5DevftqWWjnPmDo934XZaQajnnNHTH15gUKz/3/
+      NP3Bv0W6Z4tv3B3EnkMP0Zmd5p2P4jz20Mdqx+cUACcH9YZtEW7LMUyYv72HbtBb5+PEeGZB
+      snu7Y0xNZQk3Buixa7RkFDyxEHVqiVNTMpLkIegXuctjW6AAggD3dIQYmbm6C3U5wWQii5of
+      ouxsoqx7yJ/9Oenhy0j5MkpyHEdkL1rxbSamitgiHXQ1FIGqAoiGTvpf/g7q2PJ9e2VkhInf
+      /j/oev6HiL7VPXUt4J3XfsipD6cItLfx2ktj5NJpEvbYnAJUzg+Q/J3/VLsg+m9+C+eBbgZH
+      Zuhoq8cxr3uSLZQIeF1kiyohn7t2fPECVyut/GyaOmNTWdqbtn4M29EgIdSDNiODTcD/aBsf
+      N8pLFODPXuuvfrmcotNjMJzTgNWHSu9tD9NZL80pgNTCF3/hl25YXt/ls9d9+K+hjo1ReP1n
+      BD9vxQuvhYmZNDZVo7mlAVKTuAN1kMqtbAOcOz9AfVsTY/FZTl2aIOw2SOU1ZE2ltz1KWbFR
+      KFewa2U0wUlGVtnV4MMfDKGWSwxPJCkWFR575BDx+BQ+t5u+0QQRSUTVNYbiWX7zqx/f8srb
+      JAf1v7Wf4b/9OYnEIFOTV7i3aReiTVh+KFRVGF7HZO4vHG0j4nMQlOxkSxufya27dHpN6eRz
+      Zy0FWCPPfPXXlj2+otXZ0hxjeHSG8ekkqm4QjQYI+b143dW3fiKZxQDqYn40zZh7+5smCAKh
+      gER9XRC/24kApLI5VN0gEvERC0pL9g7YShLjg0zOXkA1y1QKedTLZ/hk3caXfumu8/L0PS0A
+      7G/feHck6ndQ5709lyG/HZmLCKuP4Pvq3ESYWB8hFqt+rsuhua9HD65c0LFFrtQAR+9eu6Ab
+      JTU6tOTYN/bYuahJjCRvbN1Khyjwra8cwn61e9gQctFZ72F45sYmphyiwD09AfS7D5HmL1ZN
+      77n70KppLFampgD2hgiBX/7MdsqypTg9S1ubSDjIn//qEb76J+8ys86N1hyiwLd/8TD3BAsw
+      0gdaBTxhDrXsplh2MnudrVhXyu94vYkvm0B/8AEcbW0r2gGOtjZ8jz26rjIsljLXAqTL+D6Y
+      2/e1cLgBPexZc0wwQD5fXDI7PJ/Fq0LDwpngrYwrbjl4mOTwIErparCLYOPiibeZ/K/f5Wui
+      xPdsR5hw1q8pr0Yhzbd7PuCBn/6fkB5ecM6GwH3dn+J0y68z5V1bE+ev5Dk2dpLA6ep0vWiz
+      0fzFpxj77l9g5JcG0NuCQZr/3R9YI0CbwJpignd1RCnkZerDgZo7dEtTmIjXzZn+CRqjXtRK
+      halEkV27mnA6HAQcNs4OJwi7DRqaWtHLRfJymWReIeR1YeoKpsuHYMokpgs0t8TQlTKa4ECX
+      ZdIlhScfuwe/a3MC/lw+P0ee/iWSI9UJrDe+95eMfni2dv4Z2wjBr/xDnh8XuTCxOMilSr3f
+      xS853uDvyX+Gd3T5qDEwcV15iQeuvMRE25cZPPwvSajLj4T53CI9jhIdH/4UUZ9nPBsGksNO
+      59/7BrMXLlJ85x2MQgGbz4f3gQeo++bfx9WzExYi23rWFBM8mCzSVeenVJjbIkkzTbL5Iqqm
+      4/F6ELQyPr80N9ouCPS01SEYMpqmIwjVMEG35MLrcaIqJuOpHK1RZ20meH67UR/1ouqb6+No
+      d7lo6L2LUjaz4OEHwNDpSl/kh7/+DU6cGueD4TR5USDU5CciOTnQ7Gfvuf+A/cR/Wj7zZWge
+      e55muY/K1/47KSJUVB3DBLfDRlCy43Xb4cUXQF9+5Mhl6LT+zj9H93gwCkVsPq/11t9k5mKC
+      3XbKnUHm/97dXV3SbyVT6/gm7If94PZuhF6jUlY5+/oVREXnXn91pKulPkDHvnr4+bdhHQ9/
+      jUQ/ru/9Ik3f+FuwL9MSTE6sfP1EHPHQYevB3yJqnW3TY6fSFa59TM+dG2UqBUN033PfgmOC
+      zUak7QiastCleWIggR4/B6/96xsvcOosvPr7N369xZZRawGmxwRe/qu5zRie+IqCL1LE6XKv
+      yyjN5oqoqoov4F9xW6Xt5rPf/Ke8+V//nOGzZ5CCIe5/5qsYNDMzunB22DRB+8nvIRob9PV/
+      7/+BB34TAi0Ljzc1w+gKy683t1z/nMWGWdUdejAhE/M5KZZ1/F4X2VwB1TCx2exEghKFfAHJ
+      62N8Jktno490tkI05GHm/GXKuoO/8/gm9JG2AJck8cQ3/vcFxxLx7BIFkGwZnOOvb7xAQ4Wz
+      38d48B/w4RtxLp2YBqC3p5mDtnGE5RSsZxfUrR5VdzNwuW7fWGVFKZJOL7/Pwqru0AE/uBwC
+      xXJ1USdM8DhtZOVqHKxpgsNmoqra1e2OqoariUnId3M3jN4o0eYALbvLTAwkMU3w+Jz0ugYQ
+      bnRvsMVc/ltOpL7AqRfn3vjTQyDfs5/joVHIXFU+mw327YP7H9yccjdIpVLh7/7Kx1ZPeBsy
+      5w0aMDl4/5yW+wImjcE2upcJBy7JMja7c0EX5/gdMCkpCAId+xpo7Y2hKQZOjx3hlaU7uoym
+      dGYUONq4fBcvo5iEnEvnQoyZfi5cWGr0ftivc+T3v4KznAelAqEwuG6dBXDFxHusf52L24Oa
+      AviCcOjBtb3pJM/t9WZfL6JdRLRffbjLSxfLen1EJ62AppicjOvsbbFzZlKnwwO6DrMeGw0l
+      g4M9DvYF5xRBqGRQK0u7EmrFQFV0nOHwltXJYnlq1m2x6OLCxY7ap1isvoGSmWogSTZXnfhJ
+      5xf6zWQLC/1eZLlMWdWve/62w770TdwetvEPjjuZyBk4AFE3MUSoD9hwAKGrA2jm4mkMh0S0
+      delwZrTVi8dn7Qa5HaxpJvjgrkZGx6fJFzVMycP+xgCD8RSekJ+KXMJjguZ04EDA0CroVBfM
+      zSs6sm6yuyVMwOvj4O7bcEQjsnSHzMc6q7ft6QNzD+3Hr3UVO6+flRDp5rHP7uXFPz5PPlmN
+      HfBH3Tz2y3uxiZYH6HawppngsWSeoN+LRwKn5CGRy6FrGsGgF9FnY+hKAinioqvOz9T0LJrD
+      QUvQy6ysICvVGeDbdtXozoc3L6+2Y9S1+/nqvzjG5JVq16qpO4jTY63vvF3U7rzDoVEXmxsC
+      dDi0Nc0EAzw4zxX64N7OzZRv+2k4APX7YebCxvM6/MsAOD12OvZHN56fxYap2QBOp059Xbb2
+      cTo3aejvTuDRf7rxPHZ9ElqsIPZbjVoLMDkU58ff+VHtxGef/RLNXS0bcodevOiVrqrImonP
+      sz6Db3GscbYgE7yZcwz7vwznvgf9L97Y9a4gfO7/3lyZLDaFLXOH9toFzo7M4hd0FF0gFPZR
+      zObIq+D2ePjix/bxo789hT/oJeB1Mz2VwiZ58LvsNET8nOmfoCEmkc8UMT1eHEqJsmLgCgWQ
+      C1m8Djf3HOqlMXyTwiqf+TP47hchfnJ914ku+IXvQrhja+Sy2BArOvlcM4KnshXqov4Fq0Mv
+      dod2iuZCd2gEQj4PwYCX9pYYFUVBtDvwSW56WqNolQqFispMOo+hqWRlBWwifo+zlq/X56U5
+      LKFpBsGAl0hAIhj00lxX3bnGXDLOuIU4ffD152HvU2u/xt8Mv/pj6Nn6wH+LG0PI9L9gAuTT
+      OS6d+ah2ovfIXvzhwJYLkM4VCAe21tVXdzcTad/EqeoLP4I3vgXT55c/7w7Bvb8Kj/xjcG/9
+      PcwlxjBTG9zGdYdSU4A7mU1XgGvMXoKRt6phkVoFpCjU7YGuj4FnnRtpbwBLAW6cmg1QzMgM
+      nZ+sneg82IQ36L7uFknzDVzTNMgUKmSzeSIhH4pmEgst7Ztnc8WbuhTKllPXW/1Y3Lasa4uk
+      qN+Nx+upGbhuXWF3bw8Rr8m5oRSXBsaINUSp97m5qz3GOxfjRHwuvB4XM4ksMzmZA90N5PJF
+      CpqdLz164KZU0pRnmOn/6U0pazuwi3DrRl7c2qyoAM1NMQYnM4g2E9HlRnI7aot0h3wePIKL
+      SECiIewgNFWkp7UOl+QmIFVbhlS2SHtDmGwuh2noBK8OZbrdLnLZG99KaL3YBQ07t68/+6rc
+      wN7dFlVqNoBSVklPzy3BEW7w43TfeFhkSS4zky7R2WztX2Vx67IjjGALi+tR6wJpkzbkF+dm
+      Wz1PypQDeeIzWdqb6/DMW5/nejO65XIFUxAXpF1MNlfEJoDHJ2FqGqoO0gZaGguLjbBqTHAB
+      D4kLg6iaTjpXJBgJ4jE1ZgoqXU0hhoensbldBDwOpmczOHx+GkIS7XV+Lo8kqGBQH/TjdYpM
+      ZGUmxyfxuNwIbjuVgowhumhtDPHw4V03q84WFjVWnAn2Sh6cokDQ56ZQqtSCXfLFMnUBD7ph
+      kJUVRIcdp9OOy+XE4xQxMfG4HMyk8vi8Ek7xapywaRL0SxQKRSSfh90djXhc9rZxsiYAAA96
+      SURBVNvXVdritqdmAxh5AfXyXFfEsVvF5l/4YG7W2p0zySz10eDqCS0sthjLCLbY0dRe5YLs
+      xDXYWvsIsotCsUT/0BTaGjeUvhY3vByZXIlsoRpPnM0Xa8csLLaTVY3g0aTMuYExfJIdQ4Vc
+      SSMWcqEbJnanh5DPQWImhS8apZyapSJ6cDkgFgyiaQolzcCQS1yaLNLbKmGKfsIunf6RNNFY
+      gCeO33Wz6mphsYRVF8Z6oKuL8dE4dqdAtmBQqSSqs71OO8m8Sqkko5vzXJNN8Ae8iOhMZ4t4
+      vRIGEPRfC2AxKRRKVFQN7222cJbFncecDaCKiPk5RzXdXwTHxsIiU9kikeAd5Pxmcccx1wI4
+      dPTI8htD3CjWw29xq7P5exFZWNxGWApgsaOxFMBiR2MpgMWOxlIAix2NpQAWOxpLASx2NJYC
+      WOxoriqAyZXhSfqHZ0lc3RBjOSbGp8grK2dYkWUKZQ2UMv3jmZUTW1hsM7WZ4OTkFFOEiKaz
+      xO0mKdVOV9jBpekSjx/vZWJsgpff+pDjDzoYHZvm8QfuYmpsgv7ZMvsaJcbzBjY5h93pxOH1
+      Mzk8guwJEx8Zo6erif4rUzTEArz8dh9ffuIIg/Esj9/fi7UvhMV2clUBBFobw9jMEBPDw4zm
+      C8i6wMyEgGjopCu9nOobJeR1cersABgqKdlgcjbDB+cmSCX97Olq5Nxwhp5GN/GxJB6Pk2Iq
+      yZWMjIhJQZAox5O0xHycOjtAWRMo6r0ErL0hLLaRuWVR5DIV7CjlMm+e6OO+e+8i6BJIlXTa
+      G4IUC0USuTKxsI/4VJrO9kbKhTyzeYXGsJtcxcSmVnC4XdjtDtK5AkGvRD6fx+3xINgdCIaG
+      UlbwBzzEp/Ps6qq3FnSy2FasiDCLHU2tAxLsfXI75bCw2BasYVCLHY2lABY7GksBLHY0lgJY
+      7GhqRnCpZC1RYrHzqCmAJEkrpVtAMZvB4Q/itG18GvfBTz5Fn+zfcD4WFjfCsvOwJ995E1wB
+      YmEfhYrJ1KX3cdf1IgX82JQsmWSaWGMLeUXngSP7Of3eu/ijDWRlBY9Zxu6L0hpxc+7yJNPx
+      y/TuO0h2ehrBHSSdGKOtvRPJH6G7owV7sJ7QvU/f7HpbWAArrAskYDI8PEyhYuJUykxNTjL5
+      0WX21dvIVUQGBj+gYW8r6CVG4wmkXIlSWSUQ9CJm8oh5DxMTExQrMHRlgMzIFRJE6O2OMTw8
+      guTP0d3RcjPramGxhGUV4OgDj6wrky8988Vlj+86XP1fKWWJJ+6lq71pfdJZWGwxN8UVzSkF
+      6WpffjXofU0BpImf3AwxLCyWUPMFuhFXiEwmQyi08n645WIW0+HH41x+xHV0Kond6Vp32RYW
+      m8EKLYDBKy+9RGv3XvRSAiWfZSDrYl9XEBcGM3mTsqrQGHRic4fYu7uLV1/6CaJDpKGlDVFO
+      8t7lNLu624n5bKgVDQ0bo1Np9rRFEKWqEZzMyxi2O3gHR4tbmlW7QCYaIyPjVHJJcrZGhgfi
+      YDoYS2k0hr2ouh83Ofbu7uJATz1/fXqG1NQ7RKIxQi440z/KnqiNupCHn713nmj3IYZHRhA9
+      lhFssf1sqAu0GZy5PI5hszbJs9getj0eqy3mx+W2lkm32B5uugJk0hlC4TnDuVTRUMxVIu23
+      AL/HiX/RNq8WO48NKUB2vI8fvDXCvXuaMdU8ocZevLYyU7kyQjmNUS5xIWXnnk4fgm6QUpwo
+      apmYJGL3RdnT07GtRrClABYbUgC7NwL595lKS3hsFXJXriA5FFzhMCPDE+jlLBkzxtBHQ2g2
+      N1NFO3UBN/rV2eI9PR2bVQ8LixtiQwrgDTfya9/4X5Y9d/ddBzeStYXFTWHHGsFOu7UehcUt
+      oADXM4KddpFYwBodsthaNlUB/uKP/5BHP/NZTn5wid29PRTSKTxeL6bNgVeskJme4kLSxsP7
+      m1adCfa5HZYCWGw5m6YApeQw7lgn/X19pKYmKbU2MTk5wXiiSGtjlOL0ZSJ1rUDAmgm2uGXY
+      NAWQop185ZnOhQfvPcLgwCA9u3o2qxgLi01ly22A1R7+6xnB4iaEW1pYrMayPspT8RHSuWqQ
+      fDGXYTZVXeZczmeoaAbj4/F1FZLJLF0m/dqxZL5Mplipzcxe+0guyz/IYutZ2gKUk/SNpDm8
+      S+SnJ35OJpnF39WLFn8Bf6wVRfTisJkMXjqPL9pBwKEiCy7ys+OYqspMXuMTT36eoVOvkimZ
+      pAtlYs2tmPkxsqkKDd29TEzNEPE5ePTRRylVVBDVbai6hcVyLYAzgMcs1FoAbyCEwwbhaJh8
+      NocACEAw2oSdSu2yax2Wxvooqg6ZYgldkWmsj6LoEIzFiIVDTI7HsTlEQqHlI8QsLG4mt4Q7
+      tCRJ7GmJbEv5FjubbZ8I620O4/V6t1sMix3KpiyNaCgyFy5cIJOXFxzLFee6SFqlSF5WGB8f
+      X3BtMl/eDBEsLG6ITWkB1OwEfcOzeB0mb57I4VaT+JwCI1kHdSEvRmWWaLSJ6ayKyykyNHgJ
+      py/K8XsPoWj6ZohgYXFDbEoLIDjcBLwuZLkMpkE6nUZ0eAhILhAEwuEo+VzuamLwBaO4tr3z
+      ZWGxSS2AM9TCpx+rujXcBaRS+4hELKPW4tZnS5ZHX8/D3xS2DGCL7WNTFECR8+TlleN6r2cE
+      y4q1JpDF9rEpXaDsxGVeOjNFXcyPZBbJpQu4gjEmMwWafDZ0rUJd/fJGsG5Ym1RabB+bogAO
+      tx+/N080FMAhuHHb7MwUFHbt6sGuFnDoMtlcDvBUjeBAFMHydbO4BdgUBQi17OaLLbs3IysL
+      i5vKtu8R5nNbXp8W28fKCmAaXLl8iYpmAFUX5mtuzJlMBrWQZDqz8t5iWqXIhQsXSGTymyOx
+      hcUmsmIXaOjcu5gN+xjuO8fIbBodG01BkTPnhtl/+ACmnMNph5+PJzj6sU+TGj6H2+NmLD6L
+      ZnPidjn4xMceIpFI4FQLXJJ1Lg3P0NMcqBnBFhbbyYoKUNfawfnLl/A67YBAMBQCygS9NooV
+      A0kAAYGmpkYU5apPv2lWXaPtLqLBaqRXMBQCUyEWDaA7ggTsGqZlBFvcAmy7O3SxWLS8QS22
+      jVoLUCwWt0WASqWyeqKrGIaBzbY2u309abcyb0uOW1uOmgJs51t4rWWvp7UolUrr2/t4HXlb
+      ctw5cmx7F8jCYjvZdqfk6cE+3hqYIWikibQf5Mj+XUvSJIfO8kp/npg5e90018ilJjh3aZT8
+      6BWy7gid9VGOHj+KfZmpZ61S5LWfv49RmCESDjNV8fDIA0cJ+9zL5j3w0TmGB66QNANE7Vmi
+      K8gyOT7M5dEJRi720djdg9/ju64cGCr/4wc/JNbZg6bLzAzFue+xx+lorls273MnXqNQgoEs
+      tDizK96TfGqa989/RGU6vur9AHjtR/8doT6AJIUZ6/vo+nIYFf7Ld/6S/YcOIWury3zizZcR
+      Q630nXhr1fsxPXKJt/rGafHbyMzGqfg6Vvy7vPbCjwhFQnw4bax6P2Ymhjl/eQTl6v3Y9omw
+      a9V3eYMoxdyyaVzhFnzIOFZIc41AJFrTatO04RANrhdzY3d5CXhd7N1/kOnJOB63E7l8fae+
+      6Yk4dU3VvY6dq8iSTyeQ/GEO9HYwPltcUQ5Mk8b6EKlcNaLO7/OSK1zfJvOF6tFtTqIODdsq
+      ciRTGRSlfLWYle8HapF8qUK0vo1CNrWyHKbAXT0tTGXWJnN79x5y6dk13Q+joqBocyOFq/1d
+      nJKXfFlY0/2wVcocuO++ahVMm9UFstjZbHsXyOLWoFAo4PP5tibvYokrw9XF1Lo7W/B5124E
+      bzWWAuxgTr/1U+ySi0klQG+dn6H+cxQUO43N9aCWyVVMKqUyR+49wuDFd5iathFtitAQcJEp
+      VVANGzY1QzKtE4k5SY5MYta10OBzYUMnLcOxw/uYnk3xlz94ge6OFurrIpYCWNwi2CVMLU9y
+      qkh/PkHQp1KMZ3l7Ypomn4HNEyM5m6Dn4N1MTEwxHZeJZ1McboqQd6iMThSJuYqMjZsUiwK6
+      LFJKZvGoAsV8lsGZCscO7wOgvi7Clz77cRrro9tc6YVYNoDFhhjqP4+/cRex4PX3cpieSTI1
+      m+TQ/t6bKNnaqCmAK3r9oUULizuVWheokhzYTjksLLaFbZ8HsLDYTiwFsNjR1LpAL79xjnAs
+      xK7mEPGETNQnUtYhHA6QzeQJ+lyouklBVulojpDP5jl/ZZa97RFcXh92QyVZUtEVjbqQm6lM
+      BcHQ8blFNE0nni4TC/twCTqhSJCp6SwdrVGssACL7aSmAEq5yMvvJSnsawRgYkbHNDQKJ7JU
+      3F5ERHa3ShiCg4rdw8SVcXRd582TMzS1NNPgUBjLG0wkCph2B2GPgNsuoldKiKKdimlDNXTk
+      ioHWN8xoosSXn3qIiNtqhCy2j5oC7N+3m/aOMn6PnWzZIOh1gGlitDaQzJUJBLy01Xu5OJSk
+      M+rGU4mQKul0Nodxef34bRq+Rjdu5zRqWebidJHHj3SiKhUcTgf5QploQz3ZmRn8zV2EZrK4
+      Rev9b7G91IZB14OqGRRWWQnOwuJ2YMFM8JXhOIWyiWJCVLKhi26CLoini2iFErrDjcfjoq0h
+      RKjjkyDYmK89Jia1A+bcf6Zpzh2qJTGZn3zuu4E5L1PTrOU8l+e8i0yThfnML3hBmeai8lmm
+      nGvfzdrvmuzzfs+XpSabcbUM81qdq//ML5/55zAX5T1XZu26Redqn/n1MBfWazl5WVyXJffO
+      BAOM+XLMz9c058l/9f8FfxAWpAUwjWXKMMFYlO/S+i89z3x5DDBNY2ndFz0bxry6Lnefrt3I
+      BR1wt9NBNBqkLJfwuByEA17cLgfhoA9Mhdl0mZnkyu7IFha3EwtaAEUz8Hqgq62RSllGUMpU
+      DBNMgebWFvb5PRStDR0t7iBuyAbIlxRUVxvXwlkWZGAuzW5Ra7kkrbk4tbn42PWyXtwdWVzo
+      wq7RcmnNJV+WHpvftVuafl4dlul2zc/UXPB98bmlAswXdX4XakHSxZfNS7BsfRfdRHNO2EXy
+      LT6+6B4sk7m5UOCl9+1693OxzNdJu1y+c12nxbIvumyRvNeuuSFvUL/kBKZv5FILi1sKaxDe
+      YkdjKYDFjsZSAIsdjaUAFjsaSwEsdjSWAljsaCwFsNjRWApgsaOxFMBiR2MpgMWOxlIAix2N
+      pQAWOxpLASx2NJYCWOxoLAWw2NFYCmCxo7EUwGJHYymAxY7GUgCLHY2lABY7GksBLHY0lgJY
+      7GgsBbDY0VgKYLGjsRTAYkfzPwH1SRD8zs23ogAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Evolucion' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
