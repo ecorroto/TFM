@@ -1,0 +1,143 @@
+---
+title: "Memoria TFM"
+author: "Eduardo Fdez-Corroto"
+date: "17 de junio de 2016"
+output: html_document
+---
+
+
+
+
+### **Introducción**
+
+Partimos de datos libres obtenidos <https://www.data.gov/>  
+Los datos con los que vamos a trabajabar son referentes a accidentes de tráfico que se han producido en EEUU en el estado de New York.  
+
+Fuente de Datos (actualizado a 25/04/2016)
+<http://catalog.data.gov/dataset/motor-vehicle-crashes-vehicle-information-beginning-2009>
+
+Los datos contienen información sobre los **"atributos"** de los accidentes en los que se han visto involucrados vehiculos de motor.  
+El hecho de manejar un conjunto de datos que corresponden a atributos de los accientes y no disponer de datos numéricos nos limita el trabajo a un resumen descriptivo de la información y una visualización que muestre que motivo produce los accidentes ,los factores que más influyen en los mismos, la situcíon previa al accidente, la influencia de la antigüedad del parque de vehículos, etc.
+Esta información sera de gran valor para campañas de prevención de accidentes.
+
+Estudios similares que se han usado como referencia:  
+
+ <https://youtu.be/iiJq8fvSMPg>  
+ <http://www-nrd.nhtsa.dot.gov/Pubs/812101.pdf>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+### **Datos** 
+
+Partimos de una tabla de datos que contiene 2.266.517 registros de accidentes de tráfico que se han producion en el estado de nueva york entre los años 2009 y 2012.
+podemos encontarlos en:
+<http://catalog.data.gov/dataset/motor-vehicle-crashes-vehicle-information-beginning-2009>
+se han descargado en formato cvs., el separador es "," y su tamaño es de 344 MB.  
+Son datos abiertos que se pueden publicar.
+los atributos de estos acciones vienes definidos por 18 variables, véase:
+
+ 1.-**Year**: año en el que se produce el accidente  
+ 2.-**Case Vehicle ID** : identificador del vehículo                  
+ 3.-**Vehicle Body Type**: clase de vehículo    
+ 4.-**Registration Class**               
+ 5.-**Action Prior to Accident**: acción previa al accidente               
+ 6.-**Type / Axles of Truck or Bus**: nº de ejes del vehículo  
+ 7.-**Direction of Travel** : dirección del trayecto  
+ 8.-**Fuel Type** : combustible                        
+ 9.-**Vehicle Year** : año de fabricación del vehículo   
+ 10.-**State of Registration**: Estado donde se esta registrado el vehículo            
+ 11.-**Number of Occupants**: nº de ocupantes  
+ 12.-**Engine Cylinders**: nº de cilindros del vehículo                   
+ 13.-**Vehicle Make** : fabricante  
+ 14.-**Contributing Factor 1**: factor principal del accidente             
+ 15.-**Contributing Factor 1 Description**: descripción factor principal del accidente    
+ 16.-**Contributing Factor 2** : factor secundario del accidente    
+ 17.-**Description Contributing Factor 2** : descripcion factor secundario del accidente  
+ 18.-**Description Event Type**: Tipo accidente      
+ 
+
+veamos el tipo de datos:
+
+excepto la variables que hacen referencia a los años de fabricación y de accidente todas las demás son de tipo **"character"**
+
+Las variables que contienen informacíon relevevante para el estudio son:
+*Year,Action Prior to Accident, Direction of Travel, Vehicle Year, Contributing Factor 1, Contributing Factor 2, Contributing Factor 1 Description,. Contributing Factor 2 Description, Description Event Type.*
+
+
+
+
+
+
+
+### **Metodología** 
+
+
+El procemos que se ha seguido con el conjunto ha sido:
+
+.-Seleccionar las vaariables que contienen información relevante para el estudio.  
+.-Comprobar para cada variriable cuántas categorias o atributo tiene  
+.-en los casos en el número de atributos sea muy alto y eso limite el estudio , se procede a agrupar  
+     y resumir dichos atributos , de modo que cada variable tenga toda la información resumida en un máximo      de 10 atributos , con el resultado de poder visualizar y entender mejor la informacíon contenida.  
+.-Creamos un nuevo DataSet con las variables seleccionadas y  
+  
+
+
+
+
+
+
+###**Resumen de los resultados**
+
+Los accidentes de tránsito se han convertido en un problema de salud pública, generan un gran impacto en la sociedad y   a nivel económico. Por ello es materia de análisis y la prevención de los accidentes en todo el mundo se ha vuelto una prioridad, el índice de muertes por accidente de tránsito es en algunos países la segunda causa de muerte después del homicidio y todo lo que se haga en pro de prevenirlos es valioso.
+
+Existen factores que son determinantes en los siniestros  y algunos factores que son recurrentes en los accidentes 
+
+    Falta de pericia
+    Exceso de confianza
+    Distracción
+    Alcohol y drogas
+    Infracciones de transito
+    Exceso de velocidad
+    Estado de animo
+    Uso de dispositivos electrónicos
+    Cansancio y fatiga
+    Dispositivos de navegación o el radio
+    Adelantamientos indebidos
+    Maniobras peligrosas
+
+Aspectos mecánicos:
+
+    Falla en los frenos
+    Falla en la dirección
+    Falla en la suspensión
+    Falta de mantenimiento
+    Modificaciones inadecuadas
+    Exceso de carga
+    Sobredimensionamiento del vehículo
+
+La vía y el entorno:
+
+    Estado del pavimento
+    Mala iluminación
+    Señalización deficiente o nula
+    Presencia de animales en la vía
+    Tráfico denso
+
+
+
+
+
+
+
+### **Visualización ** 
+
+Se han creado 13 visualizaciones de los datos que se han includios en 2 dashboard en Tableau.vease:
+
+1) Qué influye en los accidentes
+2) cómo se produce los accidentes
+3) Cual es su evolución
+

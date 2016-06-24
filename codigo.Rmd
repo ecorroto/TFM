@@ -1,0 +1,592 @@
+---
+title: "Codigo proyecto fin de master"
+author: "Eduardo Fdez-Corroto"
+date: "21 de junio de 2016"
+output: html_document
+---
+
+
+
+Fuente de datos http://catalog.data.gov/dataset/motor-vehicle-crashes-vehicle-information-beginning-2009#
+
+**Cargamos el csv** 
+Vamos a usar data.table debido al tamaño de los datos.  
+
+```{r}
+library(data.table)
+Data.dt <- fread("Motor_Vehicle_Crashes_-_Vehicle_Information__Three_Year_Window.csv")
+Data1.dt <- Data.dt
+```
+
+Vamos a hacer un copia de los datos y trabajamos con la copia, dejamos en data.dt los datos originales
+
+```{r}
+Data1.dt <- Data.dt
+```
+
+**Primer vistazo de los datos**
+
+```{r}
+dim(Data1.dt)
+names(Data1.dt)
+head(Data1.dt)
+```
+
+Tipos de datos
+
+```{r}
+lapply(Data1.dt, class)
+sapply(Data1.dt, length)
+```
+
+
+**análisis de las variables y sus valores**
+
+Year
+
+```{r}
+class(Data1.dt$Year)
+table(Data1.dt$Year)
+max(Data1.dt$Year)
+min(Data1.dt$Year)
+length(Data1.dt$Year)
+```
+
+Campos atributos
+
+```{r}
+table(Data1.dt$`Vehicle Body Type`)
+table(Data1.dt$`Registration Class`)
+table(Data1.dt$`Action Prior to Accident`)
+table(Data1.dt$`Type / Axles of Truck or Bus`)
+table(Data1.dt$`Direction of Travel`)
+table(Data1.dt$`Fuel Type`)
+table(Data1.dt$`Vehicle Year`)
+table(Data1.dt$`State of Registration`)
+table(Data1.dt$`State of Registration`)
+table(Data1.dt$`Number of Occupants`)
+table(Data1.dt$`Engine Cylinders`)
+table(Data1.dt$`Vehicle Make`)
+table(Data1.dt$`Contributing Factor 1`)
+table(Data1.dt$`Contributing Factor 1 Description`)
+table(Data1.dt$`Contributing Factor 2`)
+table(Data1.dt$`Contributing Factor 2 Description`)
+table(Data1.dt$`Event Type`)
+```
+
+**selecionamos las variablea que contienen la información que nos interesa**   
+**Agrupamos/resumimos  sus valores**
+
+###Accion previa al accidente  
+vamos a pasar de 43 categorías a 16  
+
+```{r} 
+table(Data1.dt$`Action Prior to Accident`)
+Data1.dt$`Action Prior to Accident` <- as.character(Data1.dt$`Action Prior to Accident`)
+head(Data1.dt$`Action Prior to Accident`, 10)
+```
+
+```{r}
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Avoiding Object in Roadway"]   <- "Esquivando un objeto"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Backing"]    <- "Recibiendo asistencia "
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Changing Lanes"]  <- "Cambiando de carril"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Entering Parked Position"]    <- "Aparcando"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Going Straight Ahead"]    <- "Circulando recto"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Making Left Turn"]   <- "Girando a la izquierda"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Making Left Turn on Red"]    <- "Girando a la izquierda"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Making Right Turn"]  <- "Girando a la derecha"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Making Right Turn on Red"]    <- "Girando a la derecha"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Making U Turn"]    <- "Giro de 180 grados"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Merging"]   <- "Incorporación"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Not Applicable"]    <- "Desconocido"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Not Entered"]  <- "Desconocido"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Other"]    <- "Desconocido"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Overtaking/Passing"]    <- "Adelantamiento"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Parked"]   <- "Aparcando"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Police Pursuit"]    <- "Persecucion policial"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Slowing or Stopping"]  <- "Parando"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Starting from Parking"]    <- "Arrancando desde aparcamiento"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Starting in Traffic"]    <- "Arrancando en circulacion"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Stopped in Traffic"]   <- "Frenando en circulacion"
+Data1.dt$`Action Prior to Accident`[Data1.dt$`Action Prior to Accident` == "Unknown"]   <- "Desconocido"
+```
+
+
+
+```{r}
+Data1.dt$`Action Prior to Accident` <- factor(Data1.dt$`Action Prior to Accident`)
+
+table(Data1.dt$`Action Prior to Accident`)
+```
+
+
+###Factor principal del accidente
+
+
+```{r}
+table(Data1.dt$`Contributing Factor 1`)
+Data1.dt$`Contributing Factor 1` <- as.character(Data1.dt$`Contributing Factor 1`)
+head(Data1.dt$`Contributing Factor 1`, 10)
+````
+
+
+```{r}
+Data1.dt$`Contributing Factor 1`[Data1.dt$`Contributing Factor 1` == "ENVMT"]   <- "Factor ambiental"
+Data1.dt$`Contributing Factor 1`[Data1.dt$`Contributing Factor 1` == "HUMAN"]    <- "Factor humano"
+Data1.dt$`Contributing Factor 1`[Data1.dt$`Contributing Factor 1` == "N/A"]  <- "Factor desconocido"
+Data1.dt$`Contributing Factor 1`[Data1.dt$`Contributing Factor 1` == "VEHICLE"]    <- "VEHICLE"
+```
+
+```{r}
+Data1.dt$`Contributing Factor 1` <- factor(Data1.dt$`Contributing Factor 1`)
+table(Data1.dt$`Contributing Factor 1`)
+```
+
+###Descripción factor principal  
+de 57 a 11 catagorías
+
+```{r}
+table(Data1.dt$`Contributing Factor 1 Description`)
+Data1.dt$`Contributing Factor 1 Description` <- as.character(Data1.dt$`Contributing Factor 1 Description`)
+head(Data1.dt$`Contributing Factor 1 Description`, 10)
+```
+
+
+```{r}
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Accelerator Defective"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Brakes Defective"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Headlights Defective"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Obstruction/ Debris"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Other Lighting Defects"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Shoulders Defective/Improper"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Steering Failure"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Tinted Windows"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Tire Failure/Inadequate"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Tow Hitch Defective"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Windshield Inadequate"]   <- "Fallo vehículo"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Alcohol Involvement"]   <- "Alcohol/Drogas"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Drugs (Illegal)"]   <- "Alcohol/Drogas"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Oversized Vehicle"]   <- "Alcohol/Drogas"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Animal's Action"]   <- "Animal"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "N/A"]   <- "desconocido"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Not Applicable"]   <- "desconocido"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Not Entered"]   <- "desconocido"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Other"]   <- "desconocido"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Other*"]   <- "desconocido"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Unknown"]   <- "desconocido"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Cell Phone (hand held)"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Cell Phone (hands-free)"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Driver Inattention/Distraction*"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Eating or Drinking"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Listening/Using Headphones"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Outside Car Distraction*"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Other Electronic Device*"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Passenger Distraction"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Texting"]   <- "Distracción"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Using On Board Navigation Device"]   <- "Distracción"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Backing Unsafely"]   <- "Vía defectuosa"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Pavement Defective"]   <- "Vía defectuosa"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Pavement Slippery"]   <- "Vía defectuosa"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "View Obstructed/Limited"]   <- "Vía defectuosa"
+
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Fatigued/Drowsy"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Fell Asleep"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Illness"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Lost Consciousness"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Physical Disability"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Prescription Medication"]   <- "Fatiga/salud"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Pedestrian/Bicyclist Error/Confusion"]   <- "Peatón/ciclista"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Traffic Control Device Disregarded"]   <- "Persecución/control Policial"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Traffic Control Device Improper/Non-Working"]   <- "Persecución/control Policial"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Driverless/Runaway Vehicle"]   <- "Persecución/control Policial"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Glare"]   <- "Deslumbramiento"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Animal's Action"]   <- "Animal"
+
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Aggressive Driving/Road Rage"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Driver Inexperience*"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Failure to Keep Right"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Failure to Yield Right-of-Way"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Following Too Closely"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Lane Marking Improper/Inadequate"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Passing or Lane Usage Improper"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Passing Too Closely"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Reaction to Other Uninvolved Vehicle"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Turning Improperly"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Unsafe Lane Changing"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 1 Description`[Data1.dt$`Contributing Factor 1 Description` == "Unsafe Speed"]   <- "Motivo conductor"
+````
+
+
+```{r}
+Data1.dt$`Contributing Factor 1 Description` <- factor(Data1.dt$`Contributing Factor 1 Description`)
+table(Data1.dt$`Contributing Factor 1 Description`)
+````
+
+
+
+
+###Factor secundario del accidente
+
+```{r}
+table(Data1.dt$`Contributing Factor 2`)
+Data1.dt$`Contributing Factor 2` <- as.character(Data1.dt$`Contributing Factor 2`)
+head(Data1.dt$`Contributing Factor 2`, 10)
+```
+
+```{r}
+Data1.dt$`Contributing Factor 2`[Data1.dt$`Contributing Factor 2` == "ENVMT"]   <- "Factor ambiental"
+Data1.dt$`Contributing Factor 2`[Data1.dt$`Contributing Factor 2` == "HUMAN"]    <- "Factor humano"
+Data1.dt$`Contributing Factor 2`[Data1.dt$`Contributing Factor 2` == "N/A"]  <- "Factor desconocido"
+Data1.dt$`Contributing Factor 2`[Data1.dt$`Contributing Factor 2` == "VEHICLE"]    <- "VEHICLE"
+````
+
+```{r}
+Data1.dt$`Contributing Factor 2` <- factor(Data1.dt$`Contributing Factor 2`)
+table(Data1.dt$`Contributing Factor 2`)
+```
+
+###Descripción factor Secundario
+de 57 a 11 categorías
+
+```{r}
+table(Data1.dt$`Contributing Factor 2 Description`)
+Data1.dt$`Contributing Factor 2 Description` <- as.character(Data1.dt$`Contributing Factor 2 Description`)
+head(Data1.dt$`Contributing Factor 2 Description`, 10)
+```
+
+```{r}
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Accelerator Defective"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Brakes Defective"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Headlights Defective"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Obstruction/ Debris"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Other Lighting Defects"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Shoulders Defective/Improper"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Steering Failure"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Tinted Windows"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Tire Failure/Inadequate"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Tow Hitch Defective"]   <- "Fallo vehículo"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Windshield Inadequate"]   <- "Fallo vehículo"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Alcohol Involvement"]   <- "Alcohol/Drogas"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Drugs (Illegal)"]   <- "Alcohol/Drogas"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Oversized Vehicle"]   <- "Alcohol/Drogas"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Animal's Action"]   <- "Animal"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "N/A"]   <- "desconocido"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Not Applicable"]   <- "desconocido"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Not Entered"]   <- "desconocido"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Other"]   <- "desconocido"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Other*"]   <- "desconocido"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Unknown"]   <- "desconocido"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Cell Phone (hand held)"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Cell Phone (hands-free)"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Driver Inattention/Distraction*"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Eating or Drinking"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Listening/Using Headphones"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Outside Car Distraction*"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Other Electronic Device*"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Passenger Distraction"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Texting"]   <- "Distracción"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Using On Board Navigation Device"]   <- "Distracción"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Backing Unsafely"]   <- "Vía defectuosa"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Pavement Defective"]   <- "Vía defectuosa"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Pavement Slippery"]   <- "Vía defectuosa"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "View Obstructed/Limited"]   <- "Vía defectuosa"
+
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Fatigued/Drowsy"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Fell Asleep"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Illness"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Lost Consciousness"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Physical Disability"]   <- "Fatiga/salud"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Prescription Medication"]   <- "Fatiga/salud"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Pedestrian/Bicyclist Error/Confusion"]   <- "Peatón/ciclista"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Traffic Control Device Disregarded"]   <- "Persecución/control Policial"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Traffic Control Device Improper/Non-Working"]   <- "Persecución/control Policial"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Driverless/Runaway Vehicle"]   <- "Persecución/control Policial"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Glare"]   <- "Deslumbramiento"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Animal's Action"]   <- "Animal"
+
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Aggressive Driving/Road Rage"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Driver Inexperience*"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Failure to Keep Right"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Failure to Yield Right-of-Way"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Following Too Closely"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Lane Marking Improper/Inadequate"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Passing or Lane Usage Improper"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Passing Too Closely"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Reaction to Other Uninvolved Vehicle"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Turning Improperly"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Unsafe Lane Changing"]   <- "Motivo conductor"
+Data1.dt$`Contributing Factor 2 Description`[Data1.dt$`Contributing Factor 2 Description` == "Unsafe Speed"]   <- "Motivo conductor"
+````
+
+
+```{r}
+Data1.dt$`Contributing Factor 2 Description` <- factor(Data1.dt$`Contributing Factor 2 Description`)
+table(Data1.dt$`Contributing Factor 2 Description`)
+```
+
+
+### Tipo accidente  
+De 37 a 9 categorías  
+
+```{r}
+table(Data1.dt$`Event Type`)
+Data1.dt$`Event Type` <- as.character(Data1.dt$`Event Type`)
+head(Data1.dt$`Event Type`, 10)
+````
+
+
+```{r}
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Barrier, Collision With Fixed Object"]   <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Bridge Structure, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Building/Wall, Collision With Fixed Object"]  <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Crash Cushion, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Culver/Head Wall, Collision With Fixed Object"]   <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Curbing, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Earth Embankment/Rock Cut/Ditch, Collision With Fixed Object"]  <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Fence, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Fire Hydrant, Collision With Fixed Object"]   <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Guide Rail - End, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Guide Rail - Not At End, Collision With Fixed Object"]  <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Light Support/Utility Pole, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Median - End, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Median - Not At End, Collision With Fixed Object"]  <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Other Fixed Object*, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Other Object (Not Fixed)*, Collision With"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Sign Post, Collision With Fixed Object"]  <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Snow Embankment, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "In-Line Skater, Collision With"]   <- "Atropello"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Tree, Collision With Fixed Object"]    <- "Colisión con objeto"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Pedestrian, Collision With"]  <- "Atropello"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Other Pedestrian"]    <- "Atropello"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Bicyclist, Collision With"]   <- "Atropello"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Other Motor Vehicle, Collision With"]    <- "Colisión  Vehículo"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Animal, Collision With"]  <- "Colisión con animal"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Deer"]    <- "Colisión con animal"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Fire/Explosion, Non-Collision"]   <- "Explosión"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Not Applicable"]    <- "Sin información"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "N/A"]  <- "Sin información"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Not Entered"]    <- "Sin información"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Unknown"]   <- "Sin información"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Submersion, Non-Collision"]    <- "Inmersión"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Other*, Non-Collision"]  <- "Sin colisión"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Overturned, Non-Collision"]  <- "Sin colisión"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Railroad Train, Collision With"]  <- "Colisión con Tren"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == "Ran Off Roadway Only, Non-Collision"]  <- "Sin colisión"
+Data1.dt$`Event Type`[Data1.dt$`Event Type` == ""]  <- "Sin información"
+````
+
+
+```{r}
+Data1.dt$`Event Type` <- factor(Data1.dt$`Event Type`)
+table(Data1.dt$`Event Type`)
+````
+
+
+###Año del vehículo
+pasamos a 3 categorías  
+
+```{r}
+table(Data1.dt$`Vehicle Year`)
+Data1.dt$`Vehicle Year` <- as.character(Data1.dt$`Vehicle Year`)
+head(Data1.dt$`Vehicle Year`, 10)
+````
+
+
+```{r}
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1900"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1901"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1902"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1903"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1904"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1905"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1906"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1907"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1908"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1909"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1911"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1912"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1919"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1920"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1921"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1923"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1927"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1928"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1929"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1930"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1931"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1932"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1933"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1934"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1935"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1936"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1937"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1938"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1939"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1940"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1941"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1942"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1945"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1946"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1947"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1948"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1949"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1950"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1951"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1952"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1953"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1954"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1955"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1956"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1957"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1958"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1959"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1960"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1961"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1962"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1963"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1964"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1965"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1966"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1967"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1968"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1969"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1970"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1971"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1972"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1973"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1974"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1975"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1976"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1977"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1978"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1979"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1980"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1981"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1982"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1983"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1984"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1985"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1986"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1987"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1988"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1989"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1990"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1991"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1992"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1993"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1994"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1995"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1996"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1997"]   <- "Más de 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1998"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "1999"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2000"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2001"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2002"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2003"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2004"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2005"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2006"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2007"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2008"]   <- "Entre 5 y 15 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2009"]   <- "Menos de 5 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2010"]   <- "Menos de 5 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2011"]   <- "Menos de 5 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2012"]   <- "Menos de 5 años"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2013"]   <- "Menos de 5 años"
+
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2014"]   <- "desconocido"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "3004"]   <- "desconocido"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "2013"]   <- "desconocido"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "-3"]   <- "desconocido"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "0"]   <- "desconocido"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "N/A"]   <- "desconocido"
+Data1.dt$`Vehicle Year`[Data1.dt$`Vehicle Year` == "200"]   <- "desconocido"
+````
+
+```{r}
+Data1.dt$`Vehicle Year` <- factor(Data1.dt$`Vehicle Year`)
+table(Data1.dt$`Vehicle Year`)
+````
+
+##dirección viaje
+```{r}
+table(Data1.dt$`Direction of Travel`)
+Data1.dt$`Direction of Travel` <- as.character(Data1.dt$`Direction of Travel`)
+head(Data1.dt$`Direction of Travel`, 10)
+
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "East"]   <- "Este"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "North"]   <- "Norte"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "Northeast"]   <- "Noreste"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "Northwest"]   <- "Noroeste"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "South"]   <- "Sur"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "Not Applicable"]   <- "desconocido"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "Not Entered"]   <- "desconocido"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "Southeast"]   <- "sureste"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "Southwest"]   <- "suroeste"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "West"]   <- "oeste"
+Data1.dt$`Direction of Travel`[Data1.dt$`Direction of Travel` == "Unknown"]   <- "desconocido"
+
+Data1.dt$`Direction of Travel` <- factor(Data1.dt$`Direction of Travel`)
+table(Data1.dt$`Direction of Travel`)
+```
+
+
+colnames(Data1.dt)
+
+
+### creamos una nueva tabla Data2 para estudio con las variables selecciondas
+
+```{r}
+Data2.dt<-data.table(Año=Data1.dt$Year, 
+                     Acción_previa=Data1.dt$`Action Prior to Accident`,
+                     Factor_principal=Data1.dt$`Contributing Factor 1`,
+                     Descripcion_factor1=Data1.dt$`Contributing Factor 1 Description`,
+                     Factor_secundario=Data1.dt$`Contributing Factor 2`,
+                     Descripcion_factor2=Data1.dt$`Contributing Factor 2 Description`,
+                     Antigüedad_vehiculo=Data1.dt$`Vehicle Year`,
+                     Tipo_accidente=Data1.dt$`Event Type`,
+                     Direccion_Vehiculo=Data1.dt$`Direction of Travel`)
+```
+
+```{r}
+
+colnames(Data2.dt)
+head(Data2.dt$Direccion_Vehiculo, 50)
+colnames(Data.dt)
+colnames(Data2.dt)
+head(Data2.dt, 10)
+````
+
+
+pasamos la nueva tabla a csv para trabajar con los datos en tableau  
+
+```{r}
+write.table(Data2.dt,file = "Datosestudio.csv",row.names = FALSE )
+````
+
+
+
+
+
+
